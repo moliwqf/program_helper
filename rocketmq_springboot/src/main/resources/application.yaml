@@ -1,0 +1,10 @@
+server:
+  port: 8080
+rocketmq:
+  producer:
+    group: normal-group
+    enable-msg-trace: true
+    customized-trace-topic: trace-topic
+  name-server: 192.168.3.140:9876
+  consumer:
+    enable-msg-trace: true

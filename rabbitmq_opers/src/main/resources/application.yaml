@@ -1,0 +1,21 @@
+spring:
+  rabbitmq:
+    host: 101.132.35.175
+    port: 5672
+    username: guest
+    password: Terrissrabbitmq03
+    listener:
+      simple:
+        retry:
+          enabled: true
+          max-attempts: 3
+          initial-interval: 3000
+        prefetch: 1
+        default-requeue-rejected: false
+        concurrency: 1
+        max-concurrency: 1
+        acknowledge-mode: manual
+    publisher-confirm-type: correlated
+    publisher-returns: true
+    template:
+      mandatory: true
